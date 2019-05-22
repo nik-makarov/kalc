@@ -1,0 +1,19 @@
+apiVersion: apps/v1 # for versions before 1.9.0 use apps/v1beta2
+kind: Deployment
+metadata:
+  name: adder-deployment
+spec:
+  selector:
+    matchLabels:
+      app: adder
+  replicas: 1
+  template:
+    metadata:
+      labels:
+        app: adder
+    spec:
+      containers:
+        - name: adder
+          image: nikmakarov/adder:1.2
+          ports:
+            - containerPort: 8080

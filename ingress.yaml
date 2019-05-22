@@ -1,0 +1,20 @@
+apiVersion: extensions/v1beta1
+kind: Ingress
+metadata:
+  name: calc-ingress
+spec:
+  rules:
+  - http:
+      paths:
+      - path: /*
+        backend:
+          serviceName: multiplier-service
+          servicePort: 80
+      - path: /adder/*
+        backend:
+          serviceName: adder-service
+          servicePort: 80
+      - path: /multiplier/*
+        backend:
+          serviceName: multiplier-service
+          servicePort: 80
