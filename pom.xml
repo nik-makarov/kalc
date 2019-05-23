@@ -14,14 +14,32 @@
 	<version>0.0.1-SNAPSHOT</version>
 	<name>kalc</name>
 	<description>Demo project for Spring Boot</description>
-
 	<properties>
+		<project.version>0.0.1-SNAPSHOT</project.version>
+        <spring-boot.version>2.1.4.RELEASE</spring-boot.version>
+        <feign.version>10.2.3</feign.version>
 	</properties>
-
-
-	<modules>
-		<module>adder</module>
-		<module>multiplier</module>
-	</modules>
-
+    <modules>
+        <module>adder</module>
+        <module>multiplier</module>
+    </modules>
+	<dependencyManagement>
+		<dependencies>
+            <dependency>
+                <groupId>io.github.openfeign</groupId>
+                <artifactId>feign-core</artifactId>
+                <version>${feign.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>io.github.openfeign</groupId>
+                <artifactId>feign-jackson</artifactId>
+                <version>${feign.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>javax.ws.rs</groupId>
+                <artifactId>javax.ws.rs-api</artifactId>
+                <version>2.0.1</version>
+            </dependency>
+		</dependencies>
+	</dependencyManagement>
 </project>
