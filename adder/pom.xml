@@ -5,10 +5,10 @@
 	<parent>
 		<groupId>com.nik_makrv</groupId>
 		<artifactId>kalc</artifactId>
-		<version>0.0.1-SNAPSHOT</version>
+		<version>${revision}</version>
 	</parent>
 	<artifactId>adder</artifactId>
-	<version>0.0.1-SNAPSHOT</version>
+	<version>${revision}</version>
 	<name>adder</name>
 	<description>Demo project for Spring Boot</description>
 
